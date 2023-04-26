@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Virologia Diagnosticos Moleculares</title>
+    <meta name="description" content="Virologia Diagnosticos Moleculares A-Frame">
+    <script src="aframe-master.js"></script>
+    <script src="https:/unpkg.com/aframe-environment-component@1.3.0/dist/aframe-environment-component.min.js"></script>
+    
+    <!--    
+
+      <script src="info-message.js"></script>
+
+
+    -->
+    
+    
+    <script src="highlight.js"></script>
+    <script src="info-panel.js"></script>
+
+
+    <link rel="preload" as="image" href="media/circovirus_porcino.pjpg" imagesrcset="media/circovirus_porcino_400px.jpg 400w, media/circovirus_porcino_800px.jpg 800w, media/circovirus_porcino_1600px.jpg 1600w" imagesizes="50vw">
+    <link rel="preload" as="image" href="media/herpes_canino_tipo1.jpg" imagesrcset="media/herpes_canino_tipo1_400px.jpg 400w, media/herpes_canino_tipo1_800px.png 800w, media/herpes_canino_tipo1_1600px.jpg 1600w" imagesizes="50vw">
+    <link rel="preload" as="image" href="media/inmunodeficiencia_felina.jpg" imagesrcset="media/inmunodeficiencia_felina_400px.jpg 400w, media/inmunodeficiencia_felina_800px.jpg 800w, media/inmunodeficiencia_felina_1600px.jpg 1600w" imagesizes="50vw">
+    <link rel="preload" as="image" href="media/leucemia_felina.jpg" imagesrcset="media/leucemia_felina_400px.jpg 400w, media/leucemia_felina_800px.jpg 800w, media/leucemia_felina_1600px.jpg 1600w" imagesizes="50vw">
+    <link rel="preload" as="image" href="media/herpes_ovino_tipo2.jpg" imagesrcset="media/herpes_ovino_tipo2_400px.jpg 400w, media/herpes_ovino_tipo2_800px.jpg 800w, media/herpes_ovino_tipo2_1600px.jpg 1600w" imagesizes="50vw">
+    <link rel="preload" as="image" href="media/parvovirus_canino_tipo2.jpg" imagesrcset="media/parvovirus_canino_tipo2_400px.jpg 400w, media/parvovirus_canino_tipo2_800px.png 800w, media/parvovirus_canino_tipo2_1600px.jpg 1600w" imagesizes="50vw">
+    <link rel="preload" as="image" href="media/herpes_psitácido.jpg" imagesrcset="media/herpes_psitácido.jpg_400px.jpg 400w, media/herpes_psitácido.png_800px.jpg 800w, media/herpes_psitácido.png_1600px.jpg 1600w" imagesizes="50vw">
+    <link rel="preload" as="image" href="media/panleucopenia_felina.jpg" imagesrcset="media/panleucopenia_felina.jpg_400px.jpg 400w, media/panleucopenia_felina.png_800px.png 800w, media/panleucopenia_felina.jpg_1600px.png 1600w" imagesizes="50vw">
+    <link rel="preload" as="image" href="media/herpes_felino.jpg" imagesrcset="media/herpes_felino.jpg_400px.jpg 400w, media/herpes_felino_800px.jpg 800w, media/herpes_felino_1600px.jpg 1600w" imagesizes="50vw">
+
+
+    <link rel="preload" as="image" href="media/diagnostic_molecularPoster.jpg" imagesrcset="media/diagnostic_molecularPoster_400px.jpg 400w, media/diagnostic_molecularPoster_800px.jpg 800w, media/diagnostic_molecularPoster_1600px.jpg 1600w" imagesizes="50vw">
+    <link rel="preload" as="image" href="media/informationPoster.jpg" imagesrcset="media/informationPoster_400px.jpg 400w, media/informationPoster_800px.jpg 800w, media/informationPoster_1600px.jpg 1600w" imagesizes="50vw">
+    <link rel="preload" as="image" href="media/formularioPoster.jpg" imagesrcset="media/formularioPoster_400px.jpg 400w, media/formularioPoster_800px.jpg 800w, media/formularioPoster_1600px.jpg 1600w" imagesizes="50vw">
+
+
+  
+    <link rel="preload" as="image" href="media/circovirus_porcinoPoster.jpg" imagesrcset="media/circovirus_porcinoPoster_400px.jpg 400w, media/circovirus_porcinoPoster_800px.jpg 800w" imagesizes="50vw">
+    <link rel="preload" as="image" href="media/herpes_canino_tipo1Poster.jpg" imagesrcset="media/herpes_canino_tipo1Poster_400px.jpg 400w, media/herpes_canino_tipo1Poster_800px.jpg 800w" imagesizes="50vw">
+    <link rel="preload" as="image" href="media/inmunodeficiencia_felinaPoster.jpg" imagesrcset="media/inmunodeficiencia_felinaPoster_400px.jpg 400w, media/inmunodeficiencia_felinaPoster_800px.jpg 800w" imagesizes="50vw">
+    <link rel="preload" as="image" href="media/leucemia_felinaPoster.jpg" imagesrcset="media/leucemia_felinaPoster_400px.jpg 400w, media/leucemia_felinaPoster_800px.jpg 800w" imagesizes="50vw">
+    <link rel="preload" as="image" href="media/herpes_ovino_tipo2Poster.jpg" imagesrcset="media/herpes_ovino_tipo2Poster_400px.jpg 400w, media/herpes_ovino_tipo2Poster_800px.jpg 800w" imagesizes="50vw">
+    <link rel="preload" as="image" href="media/parvovirus_canino_tipo2Poster.jpg" imagesrcset="media/parvovirus_canino_tipo2Poster_400px.jpg 400w, media/parvovirus_caninoPoster_tipo2_800px.jpg 800w" imagesizes="50vw">
+    <link rel="preload" as="image" href="media/herpes_psitácidoPoster.jpg" imagesrcset="media/herpes_psitácidoPoster.jpg_400px.png 400w, media/herpes_psitácidoPoster.png_800px.jpg 800w" imagesizes="50vw">
+    <link rel="preload" as="image" href="media/panleucopenia_felinaPoster.jpg" imagesrcset="media/panleucopenia_felinaPoster.jpg_400px.png 400w, media/panleucopenia_felinaPoster.jpg_800px.png 800w" imagesizes="50vw">
+    <link rel="preload" as="image" href="media/herpes_felinoPoster.jpg" imagesrcset="media/herpes_felinoPoster.jpg_400px.jpg 400w, media/herpesfelinoPoster.jpg_800px.jpg 800w, media/herpes_felinoPoster.jpg_1600px.jpg 1600w" imagesizes="50vw">
+
+
+
+
+  </head>
+  <body>
+    <a-scene
+      background="color: #212"
+      environment
+      cursor="rayOrigin: mouse; fuse: false" raycaster="objects: .raycastable"
+      info-message="htmlSrc: #messageText">
+      <a-assets>
+        <a-asset-item id="messageText" src="message.html"></a-asset-item>
+       
+
+        <img id="logoviro" src="media/logo_viro.png" crossorigin="anonymous">
+
+
+
+        <img id="herpescanino" src="media/herpes_canino_tipo1.jpg" crossorigin="anonymous"/>
+        <img id="herpescaninoPoster" src="media/herpes_canino_tipo1Poster.jpg" crossorigin="anonymous"/>
+         
+        <img id="herpesovino" src="media/herpes_ovino_tipo2.jpg" crossorigin="anonymous"/>
+        <img id="herpesovinoPoster" src="media/herpes_ovino_tipo2Poster.jpg" crossorigin="anonymous"/>
+        
+        <img id="circovirusporcino" src="media/circovirus_porcino.jpg" crossorigin="anonymous"/>
+        <img id="circovirusporcinoPoster" src="media/circovirus_porcinoPoster.jpg" crossorigin="anonymous"/>
+ 
+        <img id="inmunodeficiencia" src="media/Inmunodeficiencia_felina.jpg" crossorigin="anonymous"/>
+        <img id="inmunodeficienciaPoster" src="media/inmunodeficiencia_felinaPoster.jpg" crossorigin="anonymous"/>
+
+        <img id="panleucopenia" src="media/panleucopenia_felina.jpg" crossorigin="anonymous"/>
+        <img id="panleucopeniaPoster" src="media/panleucopenia_felinaPoster.jpg" crossorigin="anonymous"/>
+
+        <img id="leucemia" src="media/leucemia_felina.jpg" crossorigin="anonymous"/>
+        <img id="leucemiaPoster" src="media/leucemia_felinaPoster.jpg" crossorigin="anonymous"/>
+
+        <img id="herpespsitacido" src="media/herpes_psitacido.jpg" crossorigin="anonymous"/>
+        <img id="herpespsitacidoPoster" src="media/herpes_psitacidoPoster.jpg" crossorigin="anonymous"/>
+
+        <img id="parvoviruscanino" src="media/parvovirus_canino_tipo2.jpg" crossorigin="anonymous"/>
+        <img id="parvoviruscaninoPoster" src="media/parvovirus_canino_tipo2Poster.jpg" crossorigin="anonymous"/>
+
+        <img id="herpesfelino" src="media/herpes_felino.jpg" crossorigin="anonymous"/>
+        <img id="herpesfelinoPoster" src="media/herpes_felinoPoster.jpg" crossorigin="anonymous"/>
+
+
+        <img id="diagnosticmolecularPoster" src="media/diagnostic_molecularPoster.jpg" crossorigin="anonymous"/>
+        <img id="diagnosticmolecular" src="media/diagnostic_molecular.jpg" crossorigin="anonymous"/>
+
+        <img id="informationPoster" src="media/informationPoster.jpg" crossorigin="anonymous"/>
+        <img id="information" src="media/information.jpg" crossorigin="anonymous"/>
+
+        <img id="formularioPoster" src="media/formularioPoster.jpg" crossorigin="anonymous"/>
+        <img id="formulario" src="media/formulario.jpg" crossorigin="anonymous"/>
+
+        
+    
+
+        <a-mixin
+          id="frame"
+          geometry="primitive: plane; width: 0.783552; height: 1.0192"
+          material="color: white; shader: flat"
+          animation__scale="property: scale; to: 1.2 1.2 1.2; dur: 200; startEvents: mouseenter"
+          animation__scale_reverse="property: scale; to: 1 1 1; dur: 200; startEvents: mouseleave"
+         ></a-mixin>
+
+         <a-mixin
+          id="poster"
+          geometry="primitive: plane; width: 0.744768; height: 0.986432"
+          material="color: white; shader: flat"
+          material="shader: flat"
+          position="0 0 0.005"
+         ></a-mixin>
+
+         <a-mixin
+          id="movieImage"
+          geometry="primitive: plane; width: 1.0; height: 1.4"
+          material="src:# ; shader: flat; transparent: true"
+          position="0 0.08 0.362"
+         ></a-mixin>
+
+
+
+         <a-mixin
+         id="frame2"
+         geometry="primitive: plane; width: 0.483552; height: 0.60192"
+         material="color: white; shader: flat"
+         animation__scale="property: scale; to: 1.2 1.2 1.2; dur: 200; startEvents: mouseenter"
+         animation__scale_reverse="property: scale; to: 1 1 1; dur: 200; startEvents: mouseleave"
+        ></a-mixin>
+
+        <a-mixin
+         id="poster2"
+         geometry="primitive: plane; width: 0.444768; height: 0.586432"
+         material="color: white; shader: flat"
+         material="shader: flat"
+         position="0 0 0.005"
+        ></a-mixin>
+
+  
+      </a-assets>
+
+      <a-entity
+        id="background"
+        position="0 0 0"
+        geometry="primitive: sphere; radius: 2.0"
+        material="color: red; side: back; shader: flat"
+        scale="0.001 0.001 0.001"
+        visible="false" class="raycastable">
+      </a-entity>
+
+      <a-entity
+        position="0 1.6 0"
+        camera look-controls="magicWindowTrackingEnabled: false; touchEnabled: false; mouseEnabled: false">
+        <a-entity
+          id="fadeBackground"
+          geometry="primitive: sphere; radius: 2.5"
+          material="color: black; side: back; shader: flat; transparent: true; opacity: 0.6" visible="false">
+        </a-entity>
+      </a-entity>
+
+      <!-- Hand controls -->
+      <a-entity id="leftHand" laser-controls="hand: left" raycaster="objects: .raycastable"></a-entity>
+      <a-entity id="rightHand" laser-controls="hand: right" raycaster="objects: .raycastable" line="color: #118A7E"></a-entity>
+
+      
+ 
+      <a-entity id="ui" position="0.04 1.6 -2.5"> 
+        <a-entity 
+          id="title"
+          position="-0.495 -0.04 1.0"
+          scale="0.55 0.55 0.55"
+          visible="false"
+          text="shader: msdf; anchor: center; width: 2.30; align: center; negate: true; transparent: true; color:#050505; value:">  
+        </a-entity>
+    
+         <a-entity 
+          id="title"
+          position="-0.030 -0.780 -0.430"
+          scale="1 1 1"
+          visible="false"
+          text="shader: msdf; anchor: center; width: 2.30; align: center; negate: true; transparent: true; color: #050505; value:  ">  
+       </a-entity>
+
+      <a-entity 
+        id="title"
+        position="1.05 -0.780 -0.830"
+        scale="1 1 1"
+        visible="false"
+        text="shader: msdf; anchor: center; width: 2.30; align: center; negate: true; transparent: true; color: #050505; value:">  
+      </a-entity>
+
+      <a-entity 
+        id="title"
+        position="2.200 -0.780 -0.830"
+        scale="1 1 1"
+        visible="true"
+        text="shader: msdf; anchor: center; width: 2.30; align: center; negate: true; transparent: true; color: #050505; value:">  
+      </a-entity>
+
+      <a-entity 
+        id="title"
+        position="-0.500 1.430 -0.830"
+        scale="1 1 1"
+        visible="true"
+        text="shader: msdf; anchor: center; width: 2.30;  align: center; negate: true; transparent: true; color: #050505; value: ">  
+      </a-entity>
+  
+      <a-entity 
+        id="title"
+        position="0.490 1.430 -0.830"
+        scale="1 1 1"
+        visible="true"
+        text="shader: msdf; anchor: center; width: 2.30; align: center; negate: true; transparent: true; color: #050505; value: ">  
+      </a-entity>
+
+      <a-entity 
+        id="title"
+        position="1.586 1.430 -0.830"
+        scale="1 1 1"
+        visible="false"
+        text="shader: msdf; anchor: center; width: 2.30; align: center; negate: true; transparent: true; color: #050505; value: ">  
+      </a-entity>
+
+
+      <a-entity 
+        id="title"
+        position="2.650 1.430 -0.830"
+        scale="1 1 1"
+        visible="false"
+        text="shader: msdf; anchor: center; width: 2.30; align: center; negate: true; transparent: true; color: #050505; value: ">  
+      </a-entity>
+ 
+-
+
+        <!-- Poster menu -->
+        <a-entity id="menu" highlight>
+
+
+
+          <a-entity id="formularioButton" position="0.95 -0.8 0.5" mixin="frame2" class="raycastable menu-button">
+            <a-entity material="src: #formularioPoster" mixin="poster2"></a-entity>
+          </a-entity>
+
+
+          <a-entity id="informationButton" position="0.25 -0.8 0.5" mixin="frame2" class="raycastable menu-button">
+            <a-entity material="src: #informationPoster" mixin="poster2"></a-entity>
+          </a-entity>
+
+          <a-entity id="diagnosticmolecularButton" position="-0.45 -0.8 0.5" mixin="frame2" class="raycastable menu-button">
+            <a-entity material="src: #diagnosticmolecularPoster" mixin="poster2"></a-entity>
+          </a-entity>
+
+
+          <a-entity id="circovirusporcinoButton" position="-0.15 -0.3 0" mixin="frame" class="raycastable menu-button">
+            <a-entity material="src: #circovirusporcinoPoster" mixin="poster"></a-entity>
+          </a-entity>
+
+          <a-entity id="herpesovinoButton" position="0.7 -0.3 0" mixin="frame" class="raycastable menu-button">
+            <a-entity material="src: #herpesovinoPoster" mixin="poster"></a-entity>
+          </a-entity>
+
+          <a-entity id="inmunodeficienciaButton" position="1.55 -0.3 0" mixin="frame" class="raycastable menu-button">
+            <a-entity material="src: #inmunodeficienciaPoster" mixin="poster"></a-entity>
+          </a-entity>
+
+          <a-entity id="herpesfelinoButton" position="-1.0 -0.3 0" mixin="frame" class="raycastable menu-button">
+            <a-entity material="src: #herpesfelinoPoster" mixin="poster"></a-entity>
+          </a-entity>
+
+
+
+          <a-entity id="herpescaninoButton" position="-1.4 0.5 -0.05" mixin="frame" class="raycastable menu-button">
+            <a-entity material="src: #herpescaninoPoster;" mixin="poster"></a-entity>
+          </a-entity>
+
+
+          <a-entity id="panleucopeniaButton" position="-0.55 0.5 -0.05" mixin="frame" class="raycastable menu-button">
+            <a-entity material="src: #panleucopeniaPoster" mixin="poster"></a-entity>
+          </a-entity>
+
+          <a-entity id="leucemiaButton" position="0.30  0.5 -0.05" mixin="frame" class="raycastable menu-button">
+            <a-entity material="src: #leucemiaPoster" mixin="poster"></a-entity>
+          </a-entity>
+
+          <a-entity id="herpespsitacidoButton" position="1.15  0.5 -0.05" mixin="frame" class="raycastable menu-button">
+            <a-entity material="src: #herpespsitacidoPoster" mixin="poster"></a-entity>
+          </a-entity>
+
+          <a-entity id="parvoviruscaninoButton" position="2.0  0.5 -0.05" mixin="frame" class="raycastable menu-button">
+            <a-entity material="src: #parvoviruscaninoPoster" mixin="poster"></a-entity>
+          </a-entity>
+
+
+        </a-entity>
+
+
+        <a-image  src="#logoviro"
+          rotation="0 0 0"
+          position="0.1 1 0.8"
+          geometry="primitive: plane; width: 0.5; height:0.5"
+
+        ></a-image>
+
+        <!-- Info panel of the selected movie. -->
+        <a-entity
+          id="infoPanel"
+          position="0 0 0.5"
+          info-panel
+          visible="false"
+          scale="0.001 0.001 0.001"
+          geometry="primitive: plane; width: 1.2; height: 1.5"
+          material="color: #333333; shader: flat; transparent: false" class="raycastable">
+         
+          <a-entity id="herpesovinoMovieImage" mixin="movieImage" material="src: #herpesovino" visible="false"></a-entity>
+         <a-entity id="herpescaninoMovieImage" mixin="movieImage" material="src: #herpescanino" visible="false"></a-entity>
+          <a-entity id="circovirusporcinoMovieImage" mixin="movieImage" material="src: #circovirusporcino" visible="false"></a-entity>
+          <a-entity id="inmunodeficienciaMovieImage" mixin="movieImage" material="src: #inmunodeficiencia" visible="false"></a-entity>
+          <a-entity id="panleucopeniaMovieImage" mixin="movieImage" material="src: #panleucopenia" visible="false"></a-entity> 
+          <a-entity id="leucemiaMovieImage" mixin="movieImage" material="src: #leucemia" visible="false"></a-entity>
+          <a-entity id="herpespsitacidoMovieImage" mixin="movieImage" material="src: #herpespsitacido" visible="false"></a-entity>
+          <a-entity id="parvoviruscaninoMovieImage" mixin="movieImage" material="src: #parvoviruscanino" visible="false"></a-entity>
+          <a-entity id="herpesfelinoMovieImage" mixin="movieImage" material="src: #herpesfelino" visible="false"></a-entity>
+
+
+          <a-entity id="diagnosticmolecularMovieImage" mixin="movieImage" material="src: #diagnosticmolecular" visible="false"></a-entity>
+          <a-entity id="informationMovieImage" mixin="movieImage" material="src: #information" visible="false"></a-entity>
+          <a-entity id="formularioMovieImage" mixin="movieImage" material="src: #formulario" visible="false"></a-entity>
+
+
+          <a-entity id="movieTitle"
+            position="-0.68 -0.1 0"
+            text="shader: msdf; anchor: left; width: 1.5; font: https://cdn.aframe.io/examples/ui/Viga-Regular.json; color: white; value: "></a-entity>
+          <a-entity id="movieDescription"
+            position="-0.68 -0.2 0"
+            text="baseline: top; shader: msdf; anchor: left; font: https://cdn.aframe.io/examples/ui/Viga-Regular.json; color: white; value: "></a-entity>
+        </a-entity>
+      </a-entity>
+
+    
+    </a-scene>
+  </body>
+</html>
