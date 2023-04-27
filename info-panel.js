@@ -124,4 +124,4 @@ AFRAME.registerComponent('info-panel', {
     this.fadeBackgroundEl.object3D.visible = false;
   }
 });
-Footer
+
