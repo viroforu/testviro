@@ -45,4 +45,4 @@ AFRAME.registerComponent('highlight', {
     }
   }
 });
-Footer
+
